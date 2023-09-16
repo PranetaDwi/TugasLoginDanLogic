@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        android:layout_width="900px"
+        android:layout_height="150px"
+        android:layout_below="@+id/register"
+        android:layout_marginTop="77px"
+        android:layout_centerHorizontal="true"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:startIconDrawable="@drawable/profil_icon"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_input"
+            android:layout_width="900px"
+            android:layout_height="150px"
+            android:hint="Username"
+            android:backgroundTintMode="src_atop"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        android:layout_width="900px"
+        android:layout_height="150px"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="77px"
+        android:layout_centerHorizontal="true"
+        app:startIconDrawable="@drawable/email_icon"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_input"
+            android:layout_width="900px"
+            android:layout_height="150px"
+            android:hint="Email"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone"
+        android:layout_width="900px"
+        android:layout_height="150px"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="77px"
+        android:layout_centerHorizontal="true"
+        app:startIconDrawable="@drawable/phone_icon"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_input"
+            android:layout_width="900px"
+            android:layout_height="150px"
+            android:hint="Phone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="900px"
+        android:layout_height="150px"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="77px"
+        android:layout_centerHorizontal="true"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/password_icon"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_input"
+            android:layout_width="900px"
+            android:layout_height="150px"
+            android:hint="Password"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="By Checking The Box You Agree to Our Terms and Conditions"
+        android:textSize="10sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register2"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/checkbox"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/blue"
+        android:text="Register"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/haveaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register2"
+        android:layout_marginTop="10dp"
+        android:text="Already Have Account?"
+        android:layout_marginLeft="100dp"
+        />
+
+    <TextView
+        android:id="@+id/button_log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:onClick="openRegisterActivity"
+        android:textColor="@color/blue"
+        android:layout_alignTop="@+id/haveaccount"
+        android:layout_marginLeft="2dp"
+        android:layout_toEndOf="@+id/haveaccount"
+        android:clickable="true"
+        />
+
+</RelativeLayout>
